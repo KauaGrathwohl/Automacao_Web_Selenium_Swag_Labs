@@ -45,6 +45,7 @@ public class Valida_Usuario_Performance {
     }
 
     public void FechaNavegador() {
+        System.out.println("Testes de login finalizados com sucesso!");
         driver.quit();
     }
 }

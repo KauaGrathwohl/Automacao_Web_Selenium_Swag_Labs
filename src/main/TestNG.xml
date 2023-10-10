@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automação de testes do aplicativo mobile Ema Shop">
+  <test thread-count="9" name="Automacao_Web - Estudos Java e Selenium">
+    <classes>
+
+      <!-- Grupo de testes relacionados a testes de login -->
+
+      <class name="LoginTests.Valida_Usuario_Correto"/>
+      <class name="LoginTests.Valida_Usuario_Bloqueado"/>
+      <class name="LoginTests.Valida_Usuario_Performance"/>
+
+      <!-- Grupo de testes relacionados á compras -->
+
+      <class name="ProductsTests.Realiza_Compra_Itens_Diferentes"/>
+      <class name="ProductsTests.Não_Deve_Permitir_Compra_Sem_Itens"/>
+      <class name="ProductsTests.Valida_Ordem_Dos_Itens_No_Catalogo"/>
+
+    </classes>
+  </test>
+</suite>

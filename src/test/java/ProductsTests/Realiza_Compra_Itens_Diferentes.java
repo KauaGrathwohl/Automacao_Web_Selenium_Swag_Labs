@@ -2,15 +2,17 @@ package ProductsTests;
 
 import PageObjects.LoginPage;
 import PageObjects.ProductsPage;
-import PageObjects.YourCartPage;
+import PageObjects.CartPage;
 import helpers.Functions;
 import helpers.WebDriverConfig;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertEquals;
-
+import static org.testng.Assert.assertNotNull;
 
  /* Dado que eu esteja logado no site
 
@@ -27,44 +29,37 @@ import static org.junit.Assert.assertEquals;
 
 public class Realiza_Compra_Itens_Diferentes {
 
-    WebDriver driver =
-            WebDriverConfig.Instance().driver;
-
-    Functions functions = new Functions();
-
-    LoginPage loginPage = new LoginPage();
-
-    ProductsPage productsPage = new ProductsPage();
-
-    YourCartPage yourCartPage = new YourCartPage();
+    private WebDriver driver;
+    private Functions functions;
+    private LoginPage loginPage;
+    private ProductsPage productsPage;
+    private CartPage cartPage;
 
 
-    @Test(groups = "Realiza_Compra_Itens_Diferentes")
-    public void ConfiguracaoInicial() {
+    @BeforeTest
+    public void SetUp() {
+        driver = WebDriverConfig.Instance().driver;
+
+        functions = new Functions();
+        loginPage = new LoginPage();
+
+        productsPage = new ProductsPage();
+        cartPage = new CartPage();
 
         functions.LoginStardardUser();
 
-        if (driver.getCurrentUrl().equals("https://www.saucedemo.com/inventory.html")) {
-            System.out.println("Login realizado com sucesso!");
-        } else {
-            System.err.println("Login não realizado! Existe algum problema com usuário e senha!");
-        }
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html", "Login não realizado! Existe algum problema com usuário e senha!");
     }
 
 
-    @Test(dependsOnMethods = "ConfiguracaoInicial")
+    @Test(dependsOnMethods = "SetUp")
     public void AdicionaItensNoCarrinho() {
 
         functions.ClicaComponente(productsPage.BotaoAddToCartBackpack);
         functions.ClicaComponente(productsPage.BotaoAddToCartBikeLight);
 
-        if (productsPage.BotaoRemoveBackpack == null) {
-            System.err.println("Item Backpack não adicionado ao carrinho!");
-        }
-
-        if (productsPage.BotaoRemoveBikeLight == null) {
-            System.err.println("Item Bike Light não adicionado ao carrinho!");
-        }
+        assertNotNull(productsPage.BotaoRemoveBackpack, "Item Backpack não adicionado ao carrinho!");
+        assertNotNull(productsPage.BotaoRemoveBikeLight, "Item Bike Light não adicionado ao carrinho!");
 
         System.out.println("Itens adicionados ao carrinho com sucesso!");
     }
@@ -72,48 +67,40 @@ public class Realiza_Compra_Itens_Diferentes {
 
     @Test(dependsOnMethods = "AdicionaItensNoCarrinho")
     public void AcessaCarrinho() {
-        functions.ClicaComponente(productsPage.BotaoCarrinho);
 
-        if (yourCartPage.BotaoCheckout == null) {
-            System.err.println("Carrinho não acessado!");
-        }
+        functions.ClicaComponente(productsPage.BotaoCarrinho);
+        assertNotNull(cartPage.BotaoCheckout, "Carrinho não acessado!");
     }
 
 
     @Test(dependsOnMethods = "AcessaCarrinho")
     public void RealizaCheckout() {
 
-        assertEquals("$29.99" , functions.ObterTexto(yourCartPage.ValorPrimeiroProdutoNoCarrinho));
+        Assert.assertEquals(functions.ObterTexto(cartPage.ValorPrimeiroProdutoNoCarrinho) , "$29.99" , "Valor do primeiro produto difere do esperado!");
+        Assert.assertEquals(functions.ObterTexto(cartPage.ValorSegundoProdutoNoCarrinho) , "$9.99" , "Valor do segundo produto difere do esperado!");
 
-        assertEquals("$9.99" , functions.ObterTexto(yourCartPage.ValorSegundoProdutoNoCarrinho));
+        functions.ClicaComponente(cartPage.BotaoCheckout);
 
-        functions.ClicaComponente(yourCartPage.BotaoCheckout);
+        assertNotNull(cartPage.CampoFirstName, "Checkout não acessado!");
 
-        if (yourCartPage.CampoFirstName == null) {
-            System.err.println("Checkout não acessado!");
-        }
+        functions.PreencheCampo(cartPage.CampoFirstName, cartPage.Nome);
+        functions.PreencheCampo(cartPage.CampoLastName, cartPage.Sobrenome);
+        functions.PreencheCampo(cartPage.CampoPostalCode, cartPage.CEP);
 
-        functions.PreencheCampo(yourCartPage.CampoFirstName, yourCartPage.Nome);
-        functions.PreencheCampo(yourCartPage.CampoLastName, yourCartPage.Sobrenome);
-        functions.PreencheCampo(yourCartPage.CampoPostalCode, yourCartPage.CEP);
-
-        functions.ClicaComponente(yourCartPage.BotaoContinue);
+        functions.ClicaComponente(cartPage.BotaoContinue);
     }
 
 
     @Test(dependsOnMethods = "RealizaCheckout")
     public void FinalizaCompra() {
 
-        assertEquals("Total: $43.18" , functions.ObterTexto(yourCartPage.ValorTotalCompra));
+        Assert.assertEquals(functions.ObterTexto(cartPage.ValorTotalCompra),"Total: $43.18", "Valor total difere do esperado!");
 
-        functions.ClicaComponente(yourCartPage.BotaoFinish);
+        functions.ClicaComponente(cartPage.BotaoFinish);
 
-        if (yourCartPage.MensagemCompraFinalizada == null) {
-            System.err.println("Compra não finalizada!");
-        }
+        assertNotNull(cartPage.MensagemCompraFinalizada, "Compra não finalizada!");
 
-        functions.ClicaComponente(yourCartPage.BotaoBackHome);
-
+        functions.ClicaComponente(cartPage.BotaoBackHome);
         functions.ExecutaLogout();
 
         System.out.println("Pedido finalizado com sucesso!");
@@ -122,6 +109,8 @@ public class Realiza_Compra_Itens_Diferentes {
 
     @AfterTest
     public void FechaNavegador() {
+
+        System.out.println("Teste finalizado com sucesso!");
         driver.quit();
     }
 }

@@ -2,7 +2,7 @@ package PageObjects;
 
 import org.openqa.selenium.By;
 
-public class YourCartPage {
+public class CartPage {
 
     // Objetos da página de Carrinho
 

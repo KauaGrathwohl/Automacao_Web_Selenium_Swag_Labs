@@ -41,5 +41,8 @@ public class ProductsPage {
     public By BotaoSobre = By.id("about_sidebar_link");
 
 
+    //  Objetos de ordenação
+
+    public By BotaoOrdenacao = By.xpath("//select[@class='product_sort_container']");
 
 }
