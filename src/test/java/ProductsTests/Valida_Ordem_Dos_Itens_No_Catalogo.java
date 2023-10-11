@@ -12,6 +12,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertNotNull;
+
 /* Dado que eu esteja logado no site
 
     E acesso o menu principal de produtos
@@ -50,15 +52,14 @@ public class Valida_Ordem_Dos_Itens_No_Catalogo {
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html", "Login não realizado! Existe algum problema com usuário e senha!");
     }
 
-    @Test(dependsOnMethods = "SetUp")
-    public void ValidaOrdenacaoAtoZ(){]
+    @Test
+    public void ValidaOrdenacaoAtoZ(){
 
         functions.ClicaComponente(productsPage.BotaoOrdenacao);
 
         productsPage.BotaoOrdenacao.equals(Keys.chord(Keys.CONTROL, "home"));
 
-        // Validar se os itens acima são os itens esperados
-
+        Assert.assertEquals(functions.ObterTexto(productsPage.DescricaoPrimeiroProduto), "Sauce Labs Backpack", "Ordenação do item diferente do esperado!");
 
     }
 
@@ -70,7 +71,7 @@ public class Valida_Ordem_Dos_Itens_No_Catalogo {
 
         productsPage.BotaoOrdenacao.equals(Keys.chord(Keys.CONTROL, "down"));
 
-        // Validar se os itens acima são os itens esperados
+        Assert.assertEquals(functions.ObterTexto(productsPage.DescricaoPrimeiroProduto), "Test.allTheThings() T-Shirt (Red)", "Ordenação do item diferente do esperado!");
 
     }
 
@@ -82,7 +83,7 @@ public class Valida_Ordem_Dos_Itens_No_Catalogo {
 
         productsPage.BotaoOrdenacao.equals(Keys.chord(Keys.CONTROL, "down, down"));
 
-        // Validar se os itens acima são os itens esperados
+        Assert.assertEquals(functions.ObterTexto(productsPage.DescricaoPrimeiroProduto), "Sauce Labs Onesie", "Ordenação do item diferente do esperado!");
     }
 
 
@@ -93,7 +94,7 @@ public class Valida_Ordem_Dos_Itens_No_Catalogo {
 
         productsPage.BotaoOrdenacao.equals(Keys.chord(Keys.CONTROL, "end"));
 
-        // Validar se os itens acima são os itens esperados
+        Assert.assertEquals(functions.ObterTexto(productsPage.DescricaoPrimeiroProduto), "Sauce Labs Fleece Jacket", "Ordenação do item diferente do esperado!");
 
     }
 

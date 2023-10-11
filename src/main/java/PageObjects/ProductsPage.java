@@ -45,4 +45,6 @@ public class ProductsPage {
 
     public By BotaoOrdenacao = By.xpath("//select[@class='product_sort_container']");
 
+    public By DescricaoPrimeiroProduto = By.xpath("//*[@id=\"item_4_title_link\"]/div");
+
 }

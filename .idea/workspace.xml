@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa674a0d-1c22-4116-a69a-a5721c16fb2b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductsTests/Valida_Ordem_Dos_Itens_No_Catalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductsTests/Valida_Ordem_Dos_Itens_No_Catalogo.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/TestNG.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/PageObjects/CartPage.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/PageObjects/LoginPage.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/PageObjects/ProductsPage.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/helpers/Functions.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/helpers/WebDriverConfig.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/LoginTests/Valida_Usuario_Bloqueado.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/LoginTests/Valida_Usuario_Correto.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/LoginTests/Valida_Usuario_Performance.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/ProductsTests/Não_Deve_Permitir_Compra_Sem_Itens.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/ProductsTests/Realiza_Compra_Itens_Diferentes.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/ProductsTests/Valida_Ordem_Dos_Itens_No_Catalogo.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2WK3aJxPHE76q4WIoJ7spHSg6We" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kaua.machado/IdeaProjects/WebAutomation - Java and Selenium/src/main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="LoginTests" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kaua.machado\IdeaProjects\WebAutomation - Java and Selenium\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kaua.machado\IdeaProjects\WebAutomation - Java and Selenium\src\main\java" />
+      <recent name="C:\Users\kaua.machado\IdeaProjects\WebAutomation - Java and Selenium\driver" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.Valida_Ordem_Dos_Itens_No_Catalogo">
+    <configuration name="LoginTests in WebAutomation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WebAutomation" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/LoginTests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="WebAutomation - Java and Selenium" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="WebAutomation - Java and Selenium" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Não_Deve_Permitir_Compra_Sem_Itens" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProductsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductsTests" />
+      <option name="MAIN_CLASS_NAME" value="ProductsTests.Não_Deve_Permitir_Compra_Sem_Itens" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Realiza_Compra_Itens_Diferentes" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProductsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductsTests" />
+      <option name="MAIN_CLASS_NAME" value="ProductsTests.Realiza_Compra_Itens_Diferentes" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Valida_Ordem_Dos_Itens_No_Catalogo" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProductsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductsTests" />
+      <option name="MAIN_CLASS_NAME" value="ProductsTests.Valida_Ordem_Dos_Itens_No_Catalogo" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Valida_Ordem_Dos_Itens_No_Catalogo" />
+        <item itemvalue="TestNG.Realiza_Compra_Itens_Diferentes" />
+        <item itemvalue="TestNG.Não_Deve_Permitir_Compra_Sem_Itens" />
+        <item itemvalue="JUnit.LoginTests in WebAutomation" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa674a0d-1c22-4116-a69a-a5721c16fb2b" name="Changes" comment="" />
+      <created>1696467507707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696467507707</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WebAutomation___Java_and_Selenium$Realiza_Compra_Itens_Diferentes.ic" NAME="Realiza_Compra_Itens_Diferentes Coverage Results" MODIFIED="1696623877928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ProductsTests.*</FILTER>
+    </SUITE>
+  </component>
+</project>
